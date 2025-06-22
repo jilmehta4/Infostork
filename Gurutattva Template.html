@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guru Tattva - Reimagined</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f2f5; /* Light background */
+            color: #333;
+        }
+        .text-brown-custom {
+            color: #6a4a3c; /* Custom brown from inspiration */
+        }
+        .bg-brown-custom {
+            background-color: #6a4a3c; /* Custom brown from inspiration */
+        }
+        .bg-light-brown-custom {
+            background-color: #e8d7c4; /* Lighter brown/cream from inspiration */
+        }
+        .border-brown-custom {
+            border-color: #6a4a3c;
+        }
+        .shadow-custom {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        .hover-scale {
+            transition: transform 0.2s ease-in-out;
+        }
+        .hover-scale:hover {
+            transform: scale(1.03);
+        }
+        /* Custom styles for image overlay - you might use this for sections with background images */
+        .overlay-text {
+            position: relative;
+            z-index: 10;
+        }
+        .hero-bg-img {
+            background-image: url('https://placehold.co/1200x600/6a4a3c/ffffff?text=Spiritual+Journey'); /* Placeholder image */
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header and Navigation Bar -->
+    <header class="bg-white shadow-md p-4 sticky top-0 z-50 rounded-b-lg">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <!-- Logo/Site Title -->
+            <a href="#" class="text-2xl font-bold text-brown-custom rounded-md p-2">Guru Tattva</a>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-brown-custom">
+                <svg class="w-6 h-6 text-brown-custom" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+
+            <!-- Desktop Navigation -->
+            <nav id="main-navigation" class="hidden md:flex space-x-6">
+                <a href="#about" class="text-brown-custom hover:text-orange-700 font-medium py-2 px-3 rounded-md hover:bg-light-brown-custom transition duration-200">About</a>
+                <a href="#courses" class="text-brown-custom hover:text-orange-700 font-medium py-2 px-3 rounded-md hover:bg-light-brown-custom transition duration-200">Courses</a>
+                <a href="#events" class="text-brown-custom hover:text-orange-700 font-medium py-2 px-3 rounded-md hover:bg-light-brown-custom transition duration-200">Events</a>
+                <a href="#blog" class="text-brown-custom hover:text-orange-700 font-medium py-2 px-3 rounded-md hover:bg-light-brown-custom transition duration-200">Blog</a>
+                <a href="#contact" class="text-brown-custom hover:text-orange-700 font-medium py-2 px-3 rounded-md hover:bg-light-brown-custom transition duration-200">Contact</a>
+            </nav>
+        </div>
+
+        <!-- Mobile Navigation (hidden by default) -->
+        <nav id="mobile-menu" class="md:hidden hidden bg-white mt-4 rounded-md shadow-lg">
+            <a href="#about" class="block py-3 px-4 text-brown-custom hover:bg-light-brown-custom rounded-t-md">About</a>
+            <a href="#courses" class="block py-3 px-4 text-brown-custom hover:bg-light-brown-custom">Courses</a>
+            <a href="#events" class="block py-3 px-4 text-brown-custom hover:bg-light-brown-custom">Events</a>
+            <a href="#blog" class="block py-3 px-4 text-brown-custom hover:bg-light-brown-custom">Blog</a>
+            <a href="#contact" class="block py-3 px-4 text-brown-custom hover:bg-light-brown-custom rounded-b-md">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-bg-img relative h-96 flex items-center justify-center text-white text-center rounded-b-lg mb-8">
+        <div class="absolute inset-0 bg-black opacity-40 rounded-b-lg"></div> <!-- Overlay -->
+        <div class="overlay-text max-w-3xl p-6 rounded-lg">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 leading-tight">Embrace the Path of Inner Wisdom</h1>
+            <p class="text-lg md:text-xl mb-6">Discover ancient teachings for modern living.</p>
+            <a href="#courses" class="inline-block bg-brown-custom text-white py-3 px-8 rounded-full text-lg font-semibold hover:bg-orange-700 transition duration-300 shadow-lg">Explore Courses</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="container mx-auto py-16 px-4 bg-white rounded-lg shadow-custom mb-8">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl font-bold text-brown-custom mb-8">Our Mission</h2>
+            <p class="text-lg leading-relaxed text-gray-700 mb-6">
+                At Guru Tattva, we are dedicated to sharing timeless wisdom and practices that foster personal growth, spiritual awakening, and holistic well-being. Our aim is to provide a supportive community and practical tools for individuals on their journey of self-discovery.
+            </p>
+            <p class="text-lg leading-relaxed text-gray-700">
+                Through our teachings, we aspire to help you cultivate inner peace, clarity, and a deeper connection to your true self, enabling you to live a life of purpose and harmony.
+            </p>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="container mx-auto py-16 px-4 mb-8">
+        <h2 class="text-4xl font-bold text-center text-brown-custom mb-12">Our Programs & Courses</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Course Card 1 -->
+            <div class="bg-white rounded-lg shadow-custom overflow-hidden hover-scale border border-gray-200">
+                <img src="https://placehold.co/400x250/e8d7c4/6a4a3c?text=Meditation" alt="Meditation Course" class="w-full h-48 object-cover rounded-t-lg">
+                <div class="p-6">
+                    <h3 class="text-2xl font-semibold text-brown-custom mb-3">Foundations of Meditation</h3>
+                    <p class="text-gray-700 mb-4">Learn basic meditation techniques to calm the mind and reduce stress.</p>
+                    <a href="#" class="inline-block bg-brown-custom text-white py-2 px-5 rounded-full text-md font-medium hover:bg-orange-700 transition duration-300">Learn More</a>
+                </div>
+            </div>
+            <!-- Course Card 2 -->
+            <div class="bg-white rounded-lg shadow-custom overflow-hidden hover-scale border border-gray-200">
+                <img src="https://placehold.co/400x250/e8d7c4/6a4a3c?text=Yoga" alt="Yoga Course" class="w-full h-48 object-cover rounded-t-lg">
+                <div class="p-6">
+                    <h3 class="text-2xl font-semibold text-brown-custom mb-3">Hatha Yoga Essentials</h3>
+                    <p class="text-gray-700 mb-4">An introduction to Hatha Yoga poses and breathing exercises.</p>
+                    <a href="#" class="inline-block bg-brown-custom text-white py-2 px-5 rounded-full text-md font-medium hover:bg-orange-700 transition duration-300">Learn More</a>
+                </div>
+            </div>
+            <!-- Course Card 3 -->
+            <div class="bg-white rounded-lg shadow-custom overflow-hidden hover-scale border border-gray-200">
+                <img src="https://placehold.co/400x250/e8d7c4/6a4a3c?text=Wisdom" alt="Wisdom Teachings" class="w-full h-48 object-cover rounded-t-lg">
+                <div class="p-6">
+                    <h3 class="text-2xl font-semibold text-brown-custom mb-3">Ancient Wisdom for Modern Life</h3>
+                    <p class="text-gray-700 mb-4">Exploring philosophical texts and their relevance today.</p>
+                    <a href="#" class="inline-block bg-brown-custom text-white py-2 px-5 rounded-full text-md font-medium hover:bg-orange-700 transition duration-300">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events" class="bg-light-brown-custom py-16 px-4 mb-8 rounded-lg">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold text-center text-brown-custom mb-12">Upcoming Events</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Event Card 1 -->
+                <div class="bg-white rounded-lg shadow-custom p-6 flex flex-col md:flex-row items-start hover-scale border border-gray-200">
+                    <div class="md:w-1/4 flex-shrink-0 text-center md:text-left mb-4 md:mb-0">
+                        <p class="text-5xl font-bold text-brown-custom">25</p>
+                        <p class="text-lg text-gray-600">JUL</p>
+                    </div>
+                    <div class="md:w-3/4 md:pl-6">
+                        <h3 class="text-2xl font-semibold text-brown-custom mb-2">Weekend Retreat: Silent Reflection</h3>
+                        <p class="text-gray-700 mb-3">Join us for a peaceful weekend of silent meditation and reflection in nature.</p>
+                        <p class="text-gray-600 text-sm"><strong class="text-brown-custom">Location:</strong> Mountain Retreat Center</p>
+                        <a href="#" class="inline-block mt-4 text-brown-custom hover:underline">View Details & Register</a>
+                    </div>
+                </div>
+                <!-- Event Card 2 -->
+                <div class="bg-white rounded-lg shadow-custom p-6 flex flex-col md:flex-row items-start hover-scale border border-gray-200">
+                    <div class="md:w-1/4 flex-shrink-0 text-center md:text-left mb-4 md:mb-0">
+                        <p class="text-5xl font-bold text-brown-custom">10</p>
+                        <p class="text-lg text-gray-600">AUG</p>
+                    </div>
+                    <div class="md:w-3/4 md:pl-6">
+                        <h3 class="text-2xl font-semibold text-brown-custom mb-2">Online Workshop: Mindful Living</h3>
+                        <p class="text-gray-700 mb-3">A virtual workshop on integrating mindfulness into your daily routine.</p>
+                        <p class="text-gray-600 text-sm"><strong class="text-brown-custom">Location:</strong> Online (Zoom)</p>
+                        <a href="#" class="inline-block mt-4 text-brown-custom hover:underline">View Details & Register</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section (Placeholder) -->
+    <section id="blog" class="container mx-auto py-16 px-4 bg-white rounded-lg shadow-custom mb-8">
+        <h2 class="text-4xl font-bold text-center text-brown-custom mb-12">Latest Articles</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Article Card 1 -->
+            <div class="rounded-lg overflow-hidden border border-gray-200 hover-scale">
+                <img src="https://placehold.co/400x250/e8d7c4/6a4a3c?text=Article+1" alt="Article Image" class="w-full h-48 object-cover rounded-t-lg">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-brown-custom mb-2">The Power of Gratitude</h3>
+                    <p class="text-gray-700 text-sm mb-3">Posted on <span class="text-brown-custom">June 20, 2025</span></p>
+                    <p class="text-gray-600 mb-4">Discover how practicing gratitude can transform your perspective and well-being.</p>
+                    <a href="#" class="text-brown-custom hover:underline font-medium">Read More</a>
+                </div>
+            </div>
+            <!-- Article Card 2 -->
+            <div class="rounded-lg overflow-hidden border border-gray-200 hover-scale">
+                <img src="https://placehold.co/400x250/e8d7c4/6a4a3c?text=Article+2" alt="Article Image" class="w-full h-48 object-cover rounded-t-lg">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-brown-custom mb-2">Navigating Inner Turmoil</h3>
+                    <p class="text-gray-700 text-sm mb-3">Posted on <span class="text-brown-custom">June 15, 2025</span></p>
+                    <p class="text-gray-600 mb-4">Practical approaches to finding calm amidst life's challenges.</p>
+                    <a href="#" class="text-brown-custom hover:underline font-medium">Read More</a>
+                </div>
+            </div>
+            <!-- Article Card 3 -->
+            <div class="rounded-lg overflow-hidden border border-gray-200 hover-scale">
+                <img src="https://placehold.co/400x250/e8d7c4/6a4a3c?text=Article+3" alt="Article Image" class="w-full h-48 object-cover rounded-t-lg">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-brown-custom mb-2">The Benefits of Daily Practice</h3>
+                    <p class="text-gray-700 text-sm mb-3">Posted on <span class="text-brown-custom">June 10, 2025</span></p>
+                    <p class="text-gray-600 mb-4">Exploring the profound impact of consistent spiritual exercises.</p>
+                    <a href="#" class="text-brown-custom hover:underline font-medium">Read More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="bg-brown-custom text-white py-16 px-4 text-center rounded-lg mb-8">
+        <div class="container mx-auto max-w-2xl">
+            <h2 class="text-4xl font-bold mb-6">Join Our Community</h2>
+            <p class="text-lg mb-8">Receive updates, exclusive content, and event invitations directly to your inbox.</p>
+            <form class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                <input type="email" placeholder="Enter your email address" class="p-3 rounded-full border-none focus:outline-none focus:ring-2 focus:ring-white text-gray-800 w-full sm:w-80">
+                <button type="submit" class="bg-orange-600 text-white py-3 px-8 rounded-full font-semibold hover:bg-orange-700 transition duration-300 shadow-md w-full sm:w-auto">Subscribe Now</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-gray-800 text-white py-12 rounded-t-lg">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
+            <!-- About -->
+            <div>
+                <h3 class="text-xl font-semibold mb-4 text-light-brown-custom">Guru Tattva</h3>
+                <p class="text-gray-400 text-sm">
+                    Dedicated to sharing ancient wisdom and fostering spiritual growth for a harmonious life.
+                </p>
+            </div>
+            <!-- Quick Links -->
+            <div>
+                <h3 class="text-xl font-semibold mb-4 text-light-brown-custom">Quick Links</h3>
+                <ul class="space-y-2">
+                    <li><a href="#about" class="text-gray-400 hover:text-white transition duration-200">About Us</a></li>
+                    <li><a href="#courses" class="text-gray-400 hover:text-white transition duration-200">Courses</a></li>
+                    <li><a href="#events" class="text-gray-400 hover:text-white transition duration-200">Events</a></li>
+                    <li><a href="#blog" class="text-gray-400 hover:text-white transition duration-200">Blog</a></li>
+                </ul>
+            </div>
+            <!-- Contact Info -->
+            <div>
+                <h3 class="text-xl font-semibold mb-4 text-light-brown-custom">Contact Info</h3>
+                <p class="text-gray-400 text-sm">
+                    Email: info@example.com<br>
+                    Phone: +1 (123) 456-7890<br>
+                    Address: 123 Wisdom Path, Serenity City
+                </p>
+            </div>
+            <!-- Social Media -->
+            <div>
+                <h3 class="text-xl font-semibold mb-4 text-light-brown-custom">Follow Us</h3>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-200">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.776-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33V22C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" /></svg>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-200">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12.444 3.737c-3.111 0-3.411-.01-4.606-.063-1.198-.052-2.062-.25-2.792-.533-.73-.284-1.286-.713-1.879-1.306-.593-.593-1.022-1.149-1.306-1.879-.283-.73-.48-1.594-.533-2.792-.053-1.195-.063-1.496-.063-4.606s.01-3.411.063-4.606c.052-1.198.25-2.062.533-2.792.284-.73.713-1.286 1.306-1.879.593-.593 1.149-1.022 1.879-1.306.73-.283 1.594-.48 2.792-.533 1.195-.053 1.496-.063 4.606-.063s3.411.01 4.606.063c1.198.052 2.062.25 2.792.533.73.284 1.286.713 1.879 1.306.593.593 1.022 1.149 1.306 1.879.283.73.48 1.594.533 2.792.053 1.195.063 1.496.063 4.606s-.01 3.411-.063 4.606c-.052 1.198-.25 2.062-.533 2.792-.284.73-.713 1.286-1.306 1.879-.593.593-1.149 1.022-1.879 1.306-.73.283-1.594.48-2.792.533-1.195.053-1.496.063-4.606.063zm-4.606-21.721c-3.078 0-3.376.011-4.577.062-1.096.048-1.796.222-2.316.425-.521.203-.896.471-1.27.845-.374.374-.642.749-.845 1.27-.203.52-.377 1.22-.425 2.316-.051 1.201-.062 1.499-.062 4.577s.011 3.376.062 4.577c.048 1.096.222 1.796.425 2.316.203.521.471.896.845 1.27.374.374.749.642 1.27.845.52.203 1.22.377 2.316.425 1.201.051 1.499.062 4.577.062s3.376-.011 4.577-.062c1.096-.048 1.796-.222 2.316-.425.521-.203.896-.471 1.27-.845.374-.374.642-.749.845-1.27.203-.52.377-1.22.425-2.316.051-1.201.062-1.499.062-4.577s-.011-3.376-.062-4.577c-.048-1.096-.222-1.796-.425-2.316-.203-.521-.471-.896-.845-1.27-.374-.374-.749-.642-1.27-.845-.52-.203-1.22-.377-2.316-.425-1.201-.051-1.499-.062-4.577-.062zm0 5.43c-3.64 0-6.611 2.971-6.611 6.611s2.971 6.611 6.611 6.611 6.611-2.971 6.611-6.611-2.971-6.611-6.611-6.611zm0 10.82c-2.32 0-4.209-1.889-4.209-4.209s1.889-4.209 4.209-4.209 4.209 1.889 4.209 4.209-1.889 4.209-4.209 4.209zm7.25-13.689c-.643 0-1.166.523-1.166 1.166s.523 1.166 1.166 1.166 1.166-.523 1.166-1.166-.523-1.166-1.166-1.166z" clip-rule="evenodd" /></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="container mx-auto text-center text-gray-500 text-sm mt-8 pt-8 border-t border-gray-700">
+            &copy; 2025 Guru Tattva. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        document.querySelectorAll('#mobile-menu a').forEach(item => {
+            item.addEventListener('click', () => {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
